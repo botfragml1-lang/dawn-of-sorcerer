@@ -3,6 +3,7 @@
   "productName": "Dawn of Sorcerer",
   "version": "0.1.0",
   "description": "Dawn of Sorcerer - packaged desktop build",
+  "type": "module",
   "main": "electron/main.js",
   "scripts": {
     "postinstall": "electron-builder install-app-deps || true",
