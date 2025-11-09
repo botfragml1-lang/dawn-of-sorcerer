@@ -10,7 +10,8 @@
     "dev:web": "vite",
     "dev:electron": "wait-on http://localhost:5173 && electron .",
     "build:web": "vite build --outDir build/web",
-    "dist": "npm run build:web && electron-builder --win nsis",
+    "build": "npm run build:web", 
+    "dist": "npm run build && electron-builder --win nsis",
     "start": "electron ."
   },
   "author": "Generated",
@@ -38,12 +39,12 @@
       "package.json"
     ],
     "directories": {
-      "buildResources": "assets"
+      "buildResources": "assets",
+      "output": "dist"
     },
     "win": {
-      "target": [
-        "nsis"
-      ]
+      "target": ["nsis"],
+      "icon": "electron/icon.png"
     },
     "nsis": {
       "oneClick": false,
